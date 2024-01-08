@@ -1,0 +1,140 @@
+* {margin: 0; padding: 0;}
+div {box-sizing: border-box;}
+body{background-color: lightblue;}
+
+.header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+.t-grow1 {
+  flex-grow: 3;
+}
+.t-grow3 {
+  flex-grow: 7;
+}
+.add-book {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.add-book-btn {
+  font-size: 1.5rem;
+  border: none;
+  background-color: lightblue;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.add-book-btn:hover {
+  background-color: rgb(133, 173, 186);
+}
+
+.center {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.books-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-auto-columns: 300px;
+  gap: 20px;
+}
+
+.book {
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-btn {
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.read {
+  background-color: #FF9C9C;
+}
+.read:hover {
+  background-color: #E58C8C;
+}
+.remove:hover {
+  background-color: #D8D8D8;
+}
+
+.modal {
+  background-color: rgb(141, 217, 43);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 8px;
+  display: none;
+}
+.show {display: block;}
+
+.form-flexbox {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+input, .submit-btn, .close-btn {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+.form-flexbox:nth-child(1), .form-flexbox:nth-last-child(2) {
+  text-align: center;
+}
+
+.submit-btn {background-color: #9FFF9C; transition: all 0.3s;}
+.submit-btn:hover {background-color: #8FE58C;}
+.close-btn {transition: all 0.3s;}
+.close-btn:hover {background-color: #D8D8D8;}
+
+@media screen and (max-width: 768px) {
+  .books-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+  }
+  .center {
+    margin: 0;
+  }
+
+  .t-grow1, .t-grow3 {
+    flex-grow: 3;
+  }
+}
