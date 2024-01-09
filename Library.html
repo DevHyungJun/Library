@@ -3,68 +3,44 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
   <title>Library</title>
   <link rel="stylesheet" href="Library.css">
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-      <div class="header">
-        <div class="t-grow1"></div>
-        <div>
-          <h1>library</h1>
-        </div>
-        <div class="t-grow3"></div>
+    <div class="header">
+      <div>
+        <h1>library</h1>
       </div>
-
-      <div class="add-book">
-        <button class="add-book-btn">+ Add book</button>
-      </div>
-
-      <div class="center">
-        <div class="books-container">
-          <div class="book">
-            <p class="title">title</p>
-            <p class="author">Author</p>
-            <p class="pages">3 pages</p>
-            <button class="read book-btn">Not read</button>
-            <button class="remove book-btn">Remove</button>
-          </div>
-          <div class="book">
-            <p class="title">title</p>
-            <p class="author">Author</p>
-            <p class="pages">3 pages</p>
-            <button class="read book-btn">Not read</button>
-            <button class="remove book-btn">Remove</button>
-          </div>
-          <div class="book">
-            <p class="title">title</p>
-            <p class="author">Author</p>
-            <p class="pages">3 pages</p>
-            <button class="read book-btn">Not read</button>
-            <button class="remove book-btn">Remove</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal">
-        <form class="modal-form">
-          <div class="form-flexbox">
-            <p>Add new book</p>
-            <input type="text" required placeholder="Title">
-            <input type="text" required placeholder="Author">
-            <input type="number" required placeholder="Pages">
-            <label>Have you read it?<input type="checkbox"></label>
-            <button type="submit" class="submit-btn">Submit</button>
-            <button class="close-btn">Close</button>
-          </div>
-        </form>
-      </div>
-
     </div>
+
+    <div class="add-book">
+      <button class="add-book-btn">+ Add book</button>
+    </div>
+
+    <div class="center">
+      <div class="books-container"></div>
+    </div>
+
+    <div class="modal">
+      <form class="modal-form">
+        <div class="form-flexbox">
+          <p style="font-weight: bold;">Add new book</p>
+          <input type="text" required placeholder="Title" id="title">
+          <input type="text" required placeholder="Author" id="author">
+          <input type="number" required placeholder="Pages" id="pages">
+          <label>Have you read it?<input type="checkbox" id="checkbox"></label>
+          <button type="submit" class="submit-btn">Submit</button>
+          <button class="close-btn">Close</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
 
 
   <script src="/Library.js" />

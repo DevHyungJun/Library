@@ -1,22 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
 * {margin: 0; padding: 0;}
 div {box-sizing: border-box;}
 body{background-color: lightblue;}
 
 .header {
-  height: 10vh;
-  display: flex;
   align-items: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: white;
   font-size: 1.5rem;
+  padding: 20px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
-.t-grow1 {
-  flex-grow: 3;
-}
-.t-grow3 {
-  flex-grow: 7;
-}
 .add-book {
   display: flex;
   justify-content: center;
@@ -30,15 +27,11 @@ body{background-color: lightblue;}
   padding: 1rem;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s;
+  transition: all 0.3s; 
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 .add-book-btn:hover {
   background-color: rgb(133, 173, 186);
-}
-
-.center {
-  margin-left: 25%;
-  margin-right: 25%;
 }
 
 .books-container {
@@ -48,6 +41,7 @@ body{background-color: lightblue;}
   justify-items: center;
   grid-auto-columns: 300px;
   gap: 20px;
+  max-width: 1200px;
 }
 
 .book {
@@ -61,6 +55,7 @@ body{background-color: lightblue;}
   border-radius: 8px;
   width: 350px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .book-btn {
@@ -69,13 +64,22 @@ body{background-color: lightblue;}
   padding: 10px 15px;
   border-radius: 8px;
   transition: all 0.3s;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
-.read {
+.not-read {
   background-color: #FF9C9C;
 }
-.read:hover {
+.not-read:hover {
   background-color: #E58C8C;
 }
+
+.read {
+  background-color: #9FFF9C;
+}
+.read:hover {
+  background-color: #8FE58C;
+}
+
 .remove:hover {
   background-color: #D8D8D8;
 }
@@ -89,6 +93,8 @@ body{background-color: lightblue;}
   z-index: 1;
   border-radius: 8px;
   display: none;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  border: 8px solid white;
 }
 .show {display: block;}
 
@@ -108,6 +114,7 @@ input, .submit-btn, .close-btn {
   border: none;
   border-radius: 8px;
   padding: 10px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 input[type=checkbox] {
@@ -130,11 +137,10 @@ input[type=checkbox] {
     grid-template-columns: 1fr;
     margin-bottom: 1rem;
   }
-  .center {
-    margin: 0;
-  }
+}
 
-  .t-grow1, .t-grow3 {
-    flex-grow: 3;
+@media screen and (max-width: 1180px/* ipad air 너비부터 */) {
+  .book {
+    width: 90%;
   }
 }
