@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+  <title>Library</title>
+  <link rel="stylesheet" href="Library.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <div>
+        <h1>library</h1>
+      </div>
+    </div>
+
+    <div class="add-book">
+      <button class="add-book-btn">+ Add book</button>
+    </div>
+
+    <div class="center">
+      <div class="books-container"></div>
+    </div>
+
+    <div class="modal">
+      <form class="modal-form">
+        <div class="form-flexbox">
+          <p style="font-weight: bold;">Add new book</p>
+          <input type="text" required placeholder="Title" id="title">
+          <input type="text" required placeholder="Author" id="author">
+          <input type="number" required placeholder="Pages" id="pages">
+          <label>Have you read it?<input type="checkbox" id="checkbox"></label>
+          <button type="submit" class="submit-btn">Submit</button>
+          <button class="close-btn">Close</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+  <script src="/Library.js" />
+</body>
+
+</html>
